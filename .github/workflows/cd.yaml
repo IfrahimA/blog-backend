@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - main
-#BACKEND
+#BACKEND DEPLOYMENT
 jobs:
   deploy:
     runs-on: ubuntu-latest
