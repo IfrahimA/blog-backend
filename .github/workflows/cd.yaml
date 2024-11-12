@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - main
-#BACKEND DEPLOYMENT CI/CD
+#BACKEND DEPLOYMENT CI/CD PIPELINE
 jobs:
   deploy:
     runs-on: ubuntu-latest
