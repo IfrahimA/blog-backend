@@ -9,7 +9,7 @@ export async function createUser({ username, password }) {
 }
 
 export async function loginUser({ username, password }) {
-	const user = User.findOne({ username });
+	const user = await User.findOne({ username });
 	if (!user) {
 		throw new Error('invalid username!');
 	}
@@ -22,4 +22,6 @@ export async function loginUser({ username, password }) {
 	const token = jwt.sign({ sub: user._id }, process.env.JWT_SECRET, {
 		expiresIn: '24h',
 	});
+
+	return token;
 }
